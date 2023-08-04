@@ -22,6 +22,7 @@ sequenceOf(
     "app-web",
     "app-web-backend",
     "app-web-ui",
+    "db",
     "domain",
 ).forEach {
     val project = ":guestbook-kotlin-$it"
