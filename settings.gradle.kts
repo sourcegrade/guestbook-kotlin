@@ -21,7 +21,7 @@ rootProject.name = "guestbook-kotlin"
 sequenceOf(
     "app-web",
     "app-web-backend",
-    "app-web-ui",
+    "app-web-frontend",
     "db",
     "domain",
 ).forEach {

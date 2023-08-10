@@ -36,6 +36,14 @@ object GuestbookRepositoryImpl : GuestbookRepository {
         }
     }
 
+    override suspend fun getById(id: UUID): Guestbook? {
+        return newSuspendedTransaction {
+            createJoin()
+                .select { GuestbookTable.id eq id }
+                .toGuestbook()
+        }
+    }
+
     override suspend fun exists(id: UUID): Boolean {
         return newSuspendedTransaction {
             GuestbookTable.select { GuestbookTable.id eq id }.count() > 0

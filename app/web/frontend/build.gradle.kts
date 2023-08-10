@@ -6,10 +6,9 @@ fun kotlinw(target: String): String =
     "org.jetbrains.kotlin-wrappers:kotlin-$target"
 
 dependencies {
-    commonMainImplementation(project(":guestbook-kotlin-domain"))
+    commonMainImplementation(project(":guestbook-kotlin-app-web"))
 
     commonMainImplementation(libs.bundles.ktor.client)
-    commonMainImplementation(libs.redux)
     jsMainImplementation(enforcedPlatform(kotlinw("wrappers-bom:1.0.0-pre.605")))
 
     jsMainImplementation(kotlinw("react"))

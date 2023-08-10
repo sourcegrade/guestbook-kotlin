@@ -5,14 +5,11 @@ import mui.material.CssBaseline
 import mui.material.PaletteMode
 import mui.material.styles.ThemeProvider
 import mui.material.styles.createTheme
-import mui.system.sx
 import org.sourcegrade.kontour.Crypto
 import react.FC
 import react.Props
 import react.create
 import react.dom.client.createRoot
-import react.router.RouterProvider
-import react.router.dom.HashRouter
 import web.dom.document
 import web.html.HTML.div
 

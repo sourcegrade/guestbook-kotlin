@@ -2,6 +2,7 @@ package guestbook.ui.page
 
 import guestbook.domain.Guestbook
 import guestbook.ui.component.GuestbookBox
+import guestbook.web.HomeState
 import mui.material.Button
 import mui.material.ButtonVariant
 import mui.material.Grid
@@ -17,6 +18,9 @@ import web.cssom.Auto
 import web.cssom.Display
 import web.cssom.px
 import web.cssom.rem
+
+val store = HomeState.createStore()
+val unsubscribe = store.subscribe { println(store.state) }
 
 val guestbooks = listOf(
     Guestbook(
