@@ -10,6 +10,7 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
+import org.sourcegrade.kontour.Pagination
 import org.sourcegrade.kontour.UUID
 
 object GuestbookRepositoryImpl : GuestbookRepository {
@@ -34,6 +35,10 @@ object GuestbookRepositoryImpl : GuestbookRepository {
             }.resultedValues?.toGuestbook()
                 ?: throw IllegalStateException("Failed to create guestbook")
         }
+    }
+
+    override suspend fun paginate(): Pagination<Guestbook> {
+        TODO("Not yet implemented")
     }
 
     override suspend fun getById(id: UUID): Guestbook? {

@@ -10,7 +10,7 @@ class ClientRepository<E : DomainEntity, C : Creates<E>>(
     val httpClient: HttpClient,
 ) : Repository<E, C> {
     override suspend fun countAll(): Long {
-        TODO("Not yet implemented")
+
     }
 
     override suspend fun deleteById(id: UUID): Boolean {
@@ -19,6 +19,10 @@ class ClientRepository<E : DomainEntity, C : Creates<E>>(
 
     override suspend fun exists(id: UUID): Boolean {
         TODO("Not yet implemented")
+    }
+
+    override suspend fun getById(id: UUID): E? {
+
     }
 
     override suspend fun create(item: C): E {
